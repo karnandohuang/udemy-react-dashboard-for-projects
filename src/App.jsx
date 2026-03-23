@@ -52,11 +52,11 @@ function App() {
         })
     }
 
-    function handleDeleteProject (id) {
+    function handleDeleteProject () {
         setProjectsState(prevState => {
             return {
                 ...prevState,
-                projects: prevState.projects.filter(p => p.id !== id),
+                projects: prevState.projects.filter(p => p.id !== prevState.selectedProjectId),
                 selectedProjectId: undefined
             }
         })
